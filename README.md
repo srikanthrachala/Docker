@@ -6,10 +6,13 @@ You can clone the application from github
 https://github.com/srikanthrachala/Spring/tree/master/springboot-restapi
 
 2. Create a Dockerfile
+```sh
 $ cd springboot-restapi
 $ vi Dockerfile
-
+```
 Update the Dockerfile with below contents
+
+```sh
 
 # Start with a base image containing Java runtime
 FROM openjdk:8-jdk-alpine
@@ -29,33 +32,33 @@ ADD ${JAR_FILE} app.jar
 # Run the jar file 
 ENTRYPOINT ["java","-jar","/app.jar"]
 
-
+```
 3. Building the Docker image
-
+```sh
 $ docker build -t springboot-restapi .
-
+```
 4. Running the docker image
-
+```sh
 $ docker run -p 5000:8080 springboot-restapi
-
+```
 or
-
+```sh
 $ docker run -d -p 5000:8080 springboot-restapi
-
+```
 5. Pushing the docker image to docker hub
-
+```sh
 $ docker login
 
 $ docker tag springboot-restapi srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
 
 $ docker push srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
-
+```
 It will be pushed to docker hub
 https://hub.docker.com/r/srikanthrachala/springboot-restapi
 
 6. Pulling the image from docker hub and running it
-
+```sh
 $ docker run -p 5000:8080 srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
+```
 
-
-Source : https://www.callicoder.com/spring-boot-docker-example/
+Reference : https://www.callicoder.com/
