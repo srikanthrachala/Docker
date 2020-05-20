@@ -35,21 +35,21 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 3. Building the Docker image
 ```sh
-$ docker build -t springboot-restapi .
+$ docker build -t srikanthrachala/springboot-restapi .
 ```
 4. Running the docker image
 ```sh
-$ docker run -p 5000:8080 springboot-restapi
+$ docker run -p 5000:8080 srikanthrachala/springboot-restapi
 ```
 or
 ```sh
-$ docker run -d -p 5000:8080 springboot-restapi
+$ docker run -d -p 5000:8080 srikanthrachala/springboot-restapi
 ```
 5. Pushing the docker image to docker hub
 ```sh
 $ docker login
 
-$ docker tag springboot-restapi srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
+$ docker tag srikanthrachala/springboot-restapi srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
 
 $ docker push srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
 ```
@@ -60,5 +60,3 @@ https://hub.docker.com/r/srikanthrachala/springboot-restapi
 ```sh
 $ docker run -p 5000:8080 srikanthrachala/springboot-restapi:0.0.1-SNAPSHOT
 ```
-
-Reference : https://www.callicoder.com/
