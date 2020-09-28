@@ -3,7 +3,7 @@ Spring Boot with Docker: Dockerizing a Spring Boot application
 1. Downloading the application to Dockerize
 We will dockerize a simple rest service application built with spring boot. 
 You can clone the application from github 
-https://github.com/srikanthrachala/Spring/tree/master/springboot-restapi
+https://github.com/srikanthrachala/spring-web/tree/master/springboot-restapi
 
 2. Create a Dockerfile
 ```sh
